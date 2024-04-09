@@ -25,7 +25,7 @@ app.get("/api/posts", function (req, res) {
     .get(`https://jsonplaceholder.typicode.com/comments?postId=1&id=1`)
     .then(function (responseComment) {
       const comment = responseComment.data;   
-      const bodies = 'Post: ' + post.body + '\n Comment: ' + comment[0].body
+      const bodies = 'Post: \n' + post.body + '\n Comment: \n' + comment[0].body
 
 
       var pipeline = new Pipeline();
