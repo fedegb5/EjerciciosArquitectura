@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "d327e6a9-fe6c-4455-9e2a-ac7e657e9ad6",
+		"name": "Goals publisher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29200902"
+	},
+	"item": [
+		{
+			"name": "Publishing goals",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scorer\": \"Carneiro\",\r\n    \"oponnent\": \"Riber\",\r\n    \"minute\": 91,\r\n    \"tournament\": \"Libertadores\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/goals/publish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"goals",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribing  to a team/player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scorers\":[\"Messi\", \"Carneiro\", \"Nacional\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/goals/subscribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"goals",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
